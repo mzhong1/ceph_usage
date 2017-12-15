@@ -3,7 +3,6 @@ name = "ceph_usage"
 version = "0.1.0"
 authors = ["Chris Holcombe <xfactor973@gmail.com>"]
 description = "Helper library for ceph-usage binary"
-readme = "README.md"
 license = "MIT"
 
 [dependencies]
