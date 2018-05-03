@@ -1,6 +1,6 @@
 [package]
 name = "ceph_usage"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Chris Holcombe <xfactor973@gmail.com>"]
 description = "Helper library for ceph-usage binary"
 license = "MIT"

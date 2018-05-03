@@ -9,12 +9,14 @@ use ceph::ceph::*;
 use ceph::cmd::{PoolOption, osd_pool_get};
 use ceph::rados::{rados_t, Struct_rados_cluster_stat_t, Struct_rados_pool_stat_t};
 
+#[derive(Debug)]
 pub struct PoolInfo {
     pub name: String,
     pub usage: Struct_rados_pool_stat_t,
     pub pool_size: u32,
 }
 
+#[derive(Debug)]
 pub struct UsageInfo {
     pub cluster_usage: Struct_rados_cluster_stat_t,
     pub pool_usage: Vec<PoolInfo>,
@@ -53,6 +55,7 @@ pub fn get_cluster_usage(user: &str, conf_file: &Path) -> Result<UsageInfo, Stri
         let i = get_rados_ioctx(h, &p).map_err(|e| e.to_string())?;
         debug!("Running stat against the pool");
         let pool_stats = rados_stat_pool(i).map_err(|e| e.to_string())?;
+        destroy_rados_ioctx(i);
         pool_usage.push(PoolInfo {
             name: p.clone(),
             usage: pool_stats,
