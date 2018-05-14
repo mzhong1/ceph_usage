@@ -1,6 +1,6 @@
 [package]
 name = "ceph_usage"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["Chris Holcombe <xfactor973@gmail.com>"]
 description = "Helper library for ceph-usage binary"
 documentation = "https://docs.rs/ceph_usage"
@@ -9,6 +9,6 @@ homepage = "https://github.com/cholcombe973/ceph_usage"
 license = "MIT"
 
 [dependencies]
-ceph = "~0.4"
+ceph = "0.4.3"
 log = "~0.3"
 
