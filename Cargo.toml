@@ -10,5 +10,5 @@ license = "MIT"
 
 [dependencies]
 ceph = "~1.0"
-log = "~0.3"
+log = "~0.4"
 
