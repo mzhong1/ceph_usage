@@ -9,6 +9,6 @@ homepage = "https://github.com/cholcombe973/ceph_usage"
 license = "MIT"
 
 [dependencies]
-ceph = "~3"
+ceph = {git="https://github.com/ceph/ceph-rust.git"}#"~3"
 log = "~0.4"
 
